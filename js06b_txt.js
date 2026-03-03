@@ -13,6 +13,8 @@ let subButton = document.getElementById("subButton")
 subButton.addEventListener("click",validateName)
 subButton.addEventListener("click",validateCard)
 subButton.addEventListener("click",validateNumber)
+subButton.addEventListener("click",validateMonth)
+subButton.addEventListener("click",validateYear)
 function validateName() {
    let cardName = document.getElementById("cardName")
    if (cardName.validity.valueMissing) {
@@ -40,7 +42,16 @@ function validateNumber() {
    }
 }
 
+function validateMonth () {
+   let month = document.getElementById("expMonth");
+   if (month.selectedIndex === 0) {
+      month. setCustomValidity ("Select the expiration month");
+   } else {
+      month. setCustomValidity ("");
 
+   }
+
+}
 
 
 
