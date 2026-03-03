@@ -4,13 +4,21 @@
       Chapter case
 
       Order Form Code
-      Author: 
-      Date:   
+      Author: jamey
+      Date:  3/2/2026 
 
       Filename: js06b.js
  */
-
-
+let subButton = document.getElementById("subButton")
+subButton.addEventListener("click",validateName)
+function validateName() {
+   let cardName = document.getElementById("cardName")
+   if (cardName.validity.valueMissing) {
+      cardName.setCustomValidity("Enter your name as it appears on the card")
+   } else {
+      cardName.setCustomValidity("")
+   }
+}
 
 
 
