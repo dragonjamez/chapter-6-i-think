@@ -19,6 +19,14 @@ function validateName() {
       cardName.setCustomValidity("")
    }
 }
+function validateCard() {
+   let card = document.forms.payment.elements.credit[0]
+   if (card.validity.valueMissing) {
+      card.setCustomValidity("select your credit card")
+   } else {
+      cardName.setCustomValidity("")
+   }
+}
 
 
 
