@@ -12,6 +12,7 @@
 let subButton = document.getElementById("subButton")
 subButton.addEventListener("click",validateName)
 subButton.addEventListener("click",validateCard)
+subButton.addEventListener("click",validateNumber)
 function validateName() {
    let cardName = document.getElementById("cardName")
    if (cardName.validity.valueMissing) {
@@ -35,7 +36,7 @@ function validateNumber() {
    } else if (cNum.validity.patternMismatch) {
       cNum.setCustomValidity("Enter a valid card number")
    } else {
-      cNum.setCustossmValidity("")
+      cNum.setCustossmValidity(" ")
    }
 }
 
