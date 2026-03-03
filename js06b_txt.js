@@ -60,7 +60,7 @@ function validateYear () {
    }
 }
 function validateCVC() {
-   let card = document.querySelector('input [name="credit"] : checked' ).value;
+   let card = document.querySelector('input[name="credit"]:checked').value;
    let cvc = document.getElementById("cvc") ;
    if (cvc.validity.valueMissing) {
       cvc.setCustomValidity("Enter your CVC number")
