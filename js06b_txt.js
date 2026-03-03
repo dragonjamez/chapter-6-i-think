@@ -46,9 +46,9 @@ function validateNumber() {
 function validateMonth () {
    let month = document.getElementById("expMonth");
    if (month.selectedIndex === 0) {
-      month. setCustomValidity ("Select the expiration month");
+      month.setCustomValidity ("Select the expiration month");
    } else {
-      month. setCustomValidity ("");
+      month.setCustomValidity ("");
    }
 }
 function validateYear () {
@@ -64,9 +64,9 @@ function validateCVC() {
    let cvc = document.getElementById("cvc") ;
    if (cvc.validity.valueMissing) {
       cvc.setCustomValidity("Enter your CVC number")
-   } else if ((card === "amex") && ! (/^\d{4}$/.test (cvc.value))) {
+   } else if ((card === "amex") && ! (/^\d{4}$/.test(cvc.value))) {
       cvc.setCustomValidity("Enter a 4-digit number")
-   } else if ((card !== "amex") && ! (/^\d{3}$/.test (cvc.value))) {
+   } else if ((card !== "amex") && ! (/^\d{3}$/.test(cvc.value))) {
       cvc.setCustomValidity("Enter a 3-digit number") 
    } else {
       cvc.setCustomValidity("")
