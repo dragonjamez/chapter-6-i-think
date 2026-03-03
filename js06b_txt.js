@@ -24,7 +24,7 @@ function validateCard() {
    if (card.validity.valueMissing) {
       card.setCustomValidity("select your credit card")
    } else {
-      cardName.setCustomValidity("")
+      card.setCustomValidity("")
    }
 }
 
