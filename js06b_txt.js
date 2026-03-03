@@ -59,7 +59,7 @@ function validateYear () {
    year.setCustomValidity ("");
    }
 }
-function validateCVC () {
+function validateCVC() {
    let card = document.querySelector('input [name="credit"] : checked' ).value;
    let cvc = document.getElementById("cvc") ;
    if (cvc.validity.valueMissing) {
