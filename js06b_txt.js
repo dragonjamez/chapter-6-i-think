@@ -38,7 +38,10 @@ function validateNumber() {
       cNum.setCustomValidity("Enter your card number")
    } else if (cNum.validity.patternMismatch) {
       cNum.setCustomValidity("Enter a valid card number")
-   } else {
+   } else if (luhn(cNum.value) === false){
+      cNum.setCustomValidity("Enter a legitimate card number")
+   }
+   else {
       cNum.setCustossmValidity(" ")
    }
 }
